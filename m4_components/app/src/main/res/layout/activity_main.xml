@@ -89,4 +89,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Об авторизации на устройстве"
+        android:textColor="#03DAC5" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="О новинках и предложениях"
+        android:textColor="#03DAC5" />
 </LinearLayout>
