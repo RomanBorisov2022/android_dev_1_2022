@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:orientation="vertical">
+    android:paddingEnd="16dp">
 
     <ImageView
         android:id="@+id/imageViewProfile"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/scale_1200"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/scale_1200" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Имя"
-        android:layout_marginBottom="10px">
+        android:hint="Имя">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:inputType="text"
-            android:maxLines="1"
             android:maxLength="40"
-            android:layout_alignParentStart="true" />
+            android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -38,8 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:text="0/40"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:text="0/40" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -51,54 +49,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
-            android:maxLines="1"
-            android:maxLength="40" />
+            android:maxLength="40"
+            android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Пол"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:text="Пол" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/radioButton_m"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="М"
-            android:id="@+id/radioButton_m" />
+            android:text="М" />
 
         <RadioButton
+            android:id="@+id/radioButton_w"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ж"
-            android:id="@+id/radioButton_w" />
+            android:text="Ж" />
     </RadioGroup>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
         android:gravity="center_vertical"
-        android:layout_marginTop="16dp">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:text="Получать уведомления"
-            android:layout_marginEnd="8dp" />
+            android:text="Получать уведомления" />
 
         <Switch
             android:id="@+id/notificationSwitch"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <CheckBox
@@ -117,10 +115,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Баллы"
-        android:textSize="16sp"
         android:textColor="#000000"
-        android:layout_marginTop="16dp"/>
+        android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -128,31 +126,33 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/progressTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0/100"
-            android:textSize="16sp"
-            android:textColor="#444444"
             android:layout_gravity="end"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:text="0/100"
+            android:textColor="#444444"
+            android:textSize="16sp" />
 
         <ProgressBar
+            android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:min="0"
+            android:layout_marginTop="8dp"
             android:max="100"
-            android:progress="0"
-            android:layout_marginTop="8dp" />
+            android:min="0" />
     </LinearLayout>
+
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Сохранить"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:enabled="false" />
+        android:enabled="false"
+        android:text="Сохранить" />
 
 </LinearLayout>
